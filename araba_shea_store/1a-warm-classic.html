@@ -11,6 +11,7 @@ body{margin:0;background:var(--color-bg);font-family:var(--font-body)}
 a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}
 .seg{padding:6px 16px;border-radius:999px;font-size:13.5px;font-family:inherit;cursor:pointer;background:transparent;color:var(--color-neutral-700);border:1.5px solid var(--color-neutral-300)}
 .seg.on{background:var(--color-accent-2);color:#fff;border-color:var(--color-accent-2)}
+.card.elev-sm{background:linear-gradient(180deg,#fff, var(--color-accent-100))}
 @media (max-width:900px){
   .grid-2,.grid-3{grid-template-columns:1fr !important}
   nav .nav-links{display:none !important}
@@ -30,7 +31,7 @@ a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}
   </div>
   <a class="btn btn-primary" href="https://www.amazon.com/stores/ArabasShea/page/DFD14977-FFA0-47B3-BEB5-BDD6D15E4E22" target="_blank" style="margin-left:auto">Shop on Amazon</a>
 </nav>
-<header class="grid-2" style="display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:56px 48px 64px;background:var(--color-bg)">
+<header class="grid-2" style="display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:56px 48px 64px;background:linear-gradient(160deg,var(--color-bg) 30%,var(--color-accent-100) 75%,var(--color-accent-200))">
   <div>
     <span class="tag tag-accent-2" style="margin-bottom:18px">Raw · Natural · Handmade</span>
     <h1 style="font-family:var(--font-heading);font-size:58px;line-height:1.06;margin:14px 0 20px;color:var(--color-text);text-wrap:pretty">From our family in Ghana, to your hair and skin.</h1>
@@ -50,7 +51,7 @@ a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}
     <div style="position:absolute;bottom:26px;left:-14px;background:#fff;border-radius:999px;padding:10px 20px;box-shadow:var(--shadow-md);font-size:13.5px;color:var(--color-text)"><strong style="color:var(--color-accent-700)">★ 4.6</strong> on Amazon — small business, big love</div>
   </div>
 </header>
-<section style="padding:60px 48px;background:#fff">
+<section style="padding:60px 48px;background:linear-gradient(180deg,var(--color-accent-2-100),var(--color-surface))">
   <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:8px;flex-wrap:wrap">
     <h2 style="font-family:var(--font-heading);font-size:36px;margin:0;color:var(--color-text)">The whole shop. Three things.</h2>
     <span style="font-size:14px;color:var(--color-neutral-600)">We keep it small so every batch is right.</span>
@@ -94,7 +95,7 @@ a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}
     </div>
   </div>
 </section>
-<section class="grid-2" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center;padding:64px 48px;background:var(--color-bg)">
+<section class="grid-2" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center;padding:64px 48px;background:linear-gradient(120deg,var(--color-accent-2-200),var(--color-accent-2-100) 60%,var(--color-bg))">
   <div style="display:flex;justify-content:center"><image-slot id="founder-1a" shape="circle" style="width:340px;height:340px" placeholder="Drop a founder / family photo"></image-slot></div>
   <div>
     <span class="tag tag-accent">Who we are</span>
@@ -104,16 +105,16 @@ a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}
     <div style="font-family:var(--font-heading);font-size:20px;color:var(--color-accent-700)">— Araba&rsquo;s dad, founder</div>
   </div>
 </section>
-<section style="padding:56px 48px;background:#fff">
+<section style="padding:56px 48px;background:linear-gradient(180deg,var(--color-accent-100),var(--color-accent-200))">
   <h2 style="font-family:var(--font-heading);font-size:34px;margin:0 0 6px;color:var(--color-text)">Kind words from the shop</h2>
   <p style="margin:0 0 26px;font-size:13px;color:var(--color-neutral-600)">Sample copy — paste your real Amazon reviews and we&rsquo;ll swap these in.</p>
   <div class="grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-    <div class="card" style="background:var(--color-accent-100)"><div style="color:var(--color-accent-600);letter-spacing:3px;margin-bottom:10px">★★★★★</div><p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:var(--color-text)">&ldquo;My edges are finally filling back in. The batana smells earthy and real — you can tell nothing was added.&rdquo;</p><div style="font-size:13px;color:var(--color-neutral-700)">Verified Amazon review · Batana Oil</div></div>
+    <div class="card" style="background:#fff"><div style="color:var(--color-accent-600);letter-spacing:3px;margin-bottom:10px">★★★★★</div><p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:var(--color-text)">&ldquo;My edges are finally filling back in. The batana smells earthy and real — you can tell nothing was added.&rdquo;</p><div style="font-size:13px;color:var(--color-neutral-700)">Verified Amazon review · Batana Oil</div></div>
     <div class="card" style="background:var(--color-accent-2-100)"><div style="color:var(--color-accent-600);letter-spacing:3px;margin-bottom:10px">★★★★★</div><p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:var(--color-text)">&ldquo;This is the black soap my grandmother used. My breakouts calmed down within two weeks.&rdquo;</p><div style="font-size:13px;color:var(--color-neutral-700)">Verified Amazon review · Black Soap</div></div>
-    <div class="card" style="background:var(--color-neutral-100)"><div style="color:var(--color-accent-600);letter-spacing:3px;margin-bottom:10px">★★★★★</div><p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:var(--color-text)">&ldquo;Thick, unrefined, exactly like the shea from home. A little goes a very long way.&rdquo;</p><div style="font-size:13px;color:var(--color-neutral-700)">Verified Amazon review · Shea Butter</div></div>
+    <div class="card" style="background:var(--color-surface)"><div style="color:var(--color-accent-600);letter-spacing:3px;margin-bottom:10px">★★★★★</div><p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:var(--color-text)">&ldquo;Thick, unrefined, exactly like the shea from home. A little goes a very long way.&rdquo;</p><div style="font-size:13px;color:var(--color-neutral-700)">Verified Amazon review · Shea Butter</div></div>
   </div>
 </section>
-<section style="padding:56px 48px;background:var(--color-bg)">
+<section style="padding:56px 48px;background:linear-gradient(180deg,var(--color-surface),var(--color-accent-2-100))">
   <h2 style="font-family:var(--font-heading);font-size:34px;margin:0 0 24px;color:var(--color-text)">Questions, answered</h2>
   <div style="display:flex;flex-direction:column;gap:12px;max-width:860px">
     <details style="background:#fff;border-radius:var(--radius-lg);padding:18px 24px"><summary style="font-weight:600;font-size:16px;cursor:pointer;color:var(--color-text)">Is it really 100% raw?</summary><p style="margin:12px 0 4px;font-size:15px;line-height:1.65;color:var(--color-neutral-800)">Yes. Our shea butter and black soap are handmade in Ghana the traditional way; the batana oil is pure and unrefined. One ingredient each — nothing else on the label.</p></details>
