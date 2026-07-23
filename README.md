@@ -25,15 +25,27 @@ Websites are built and iterated on with [Claude Code](https://claude.com/claude-
 
 ## Typical Workflow
 
-1. Describe the website concept (purpose, audience, vibe)
+1. Describe the website concept (purpose, audience, vibe). Or look to http://www.awwwards.com/ or https://dribbble.com/ for inspiration and functionality.
 2. Generate one or more design variations
 3. Preview them in the browser and compare
 4. Pick a direction, then refine — tweak layout, colors, copy, and components
 5. Repeat until the design is production-ready
 
+Example prompt:
+Build me a website for COMPANY [here in LOCATION or pure online company]. I'd like this website to use this referene image as inspiration, but using my own branding, colors, and logos. I'd also like to include a few specific sections on my website. work back and forth with me, starting with your open questions and concerns before implementation. 
+
 ## Structure
 
-Each website (and its variations) lives in its own directory as the project grows. The repo starts intentionally empty — content is added as concepts are explored.
+Each website (and its variations) lives in its own directory as the project grows.
+
+### Tech Stack & Deployment
+
+Most subfolder projects should use one of two setups:
+
+1. **Plain HTML/CSS** — served directly as a GitHub Page. No build step; what's committed is what's deployed.
+2. **React (Vite)** — built and deployed to GitHub Pages via a GitHub Action that runs on every push, but only when that project's code actually changes (use a `paths` filter scoped to the project's directory).
+
+Both keep the reviewer experience the same: every site variation is reachable at a simple URL that non-technical people can open in a browser.
 
 ## License
 
