@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>George Wang — Software Engineer</title>
+<meta name="description" content="George Wang, software engineer in Redmond, WA. Six years at Microsoft shipping AI features in Office, halving video playback latency, and owning a privacy compliance remediation.">
+<meta name="author" content="George Wang">
+<meta property="og:type" content="website">
+<meta property="og:title" content="George Wang — Software Engineer">
+<meta property="og:description" content="Systems that hold up under enterprise load. Microsoft Office &amp; Stream, C++ performance work, and a game shipped solo on Steam.">
+<meta property="og:image" content="assets/george-wang.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/industry.css">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); }
+  a { color: var(--color-accent-700); }
+  a:hover { color: var(--color-accent-900); }
+  ::selection { background: var(--color-accent-200); }
+
+  @media (max-width: 900px) {
+    .g-hero, .g-stats, .g-work, .g-ship, .g-foot, .g-row { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .g-hero { padding-top: 56px !important; }
+    .g-hero h1 { font-size: clamp(38px, 9vw, 62px) !important; }
+    .g-stats > div { border-right: none !important; padding: 22px 0 !important; border-bottom: 1px solid var(--color-divider); }
+    .g-stats > div:last-child { border-bottom: none; }
+    .g-row { gap: 10px !important; }
+    .g-foot h2 { font-size: clamp(32px, 8vw, 46px) !important; }
+    .g-ship { padding: 28px 22px !important; }
+  }
+  @media (max-width: 620px) {
+    section, .g-foot, .g-stats, header nav { padding-left: 20px !important; padding-right: 20px !important; }
+    header nav { gap: 14px !important; flex-wrap: wrap; }
+    .g-work article { padding: 22px 18px !important; }
+  }
+
+</style>
+</head>
+<body>
+<div style="min-height:100vh;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
+
+  <header style="position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--color-bg) 92%, transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-divider)">
+    <nav style="max-width:1120px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:28px">
+      <a href="#top" style="font-family:var(--font-heading);font-weight:700;font-size:19px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:var(--color-text);margin-right:auto">George&nbsp;Wang</a>
+      <a href="#work" style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--color-text)">Work</a>
+      <a href="#history" style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--color-text)">History</a>
+      <a href="#shipped" style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--color-text)">Shipped</a>
+      <a class="btn btn-primary" href="mailto:georgetw1108@gmail.com" style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;padding:8px 16px;text-decoration:none">Get in touch</a>
+    </nav>
+  </header>
+
+  <section id="top" class="g-hero" style="max-width:1120px;margin:0 auto;padding:88px 32px 72px;display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:start">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-700)">
+        <span style="width:28px;height:1px;background:var(--color-accent)"></span>
+        Software Engineer · Redmond, WA
+      </div>
+      <h1 style="font-family:var(--font-heading);font-weight:700;font-size:76px;line-height:0.98;letter-spacing:-0.01em;margin:20px 0 0;text-wrap:balance">Systems that hold up<br>under enterprise load.</h1>
+      <p style="font-size:18px;line-height:1.6;max-width:56ch;margin:24px 0 0;text-wrap:pretty">Eleven years building production software — six of them at Microsoft, shipping AI features in Office, cutting video latency in half, and owning a company-wide privacy compliance remediation. I started in games, and that background is why I'm fast on performance, tooling and gnarly systems work.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+        <a class="btn btn-primary" href="mailto:georgetw1108@gmail.com" style="padding:11px 22px;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none">georgetw1108@gmail.com</a>
+        <a class="btn btn-secondary" href="https://linkedin.com/in/georgetangwang/" target="_blank" rel="noopener" style="padding:11px 22px;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;color:var(--color-text)">LinkedIn</a>
+        <a class="btn btn-secondary" href="tel:+13235326811" style="padding:11px 22px;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;color:var(--color-text)">+1 323 532 6811</a>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:36px;margin-top:10px">
+    <figure class="blueprint" style="margin:0;overflow:hidden">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <img src="assets/george-wang.jpg" alt="George Wang" width="800" loading="eager" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 32%;filter:grayscale(1) contrast(1.05)">
+    </figure>
+    <div class="blueprint" style="padding:26px 24px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-700);padding-bottom:14px;border-bottom:1px solid var(--color-divider)">Spec sheet</div>
+      <dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:0">
+        <dt style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700);padding:13px 0;border-bottom:1px solid var(--color-divider)">Focus</dt>
+        <dd style="margin:0;font-size:14px;text-align:right;padding:13px 0;border-bottom:1px solid var(--color-divider)">Backend &amp; systems, full-stack</dd>
+        <dt style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700);padding:13px 0;border-bottom:1px solid var(--color-divider)">Core</dt>
+        <dd style="margin:0;font-size:14px;text-align:right;padding:13px 0;border-bottom:1px solid var(--color-divider)">C#, C++, TypeScript, SQL, .NET</dd>
+        <dt style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700);padding:13px 0;border-bottom:1px solid var(--color-divider)">Platforms</dt>
+        <dd style="margin:0;font-size:14px;text-align:right;padding:13px 0;border-bottom:1px solid var(--color-divider)">Azure, SharePoint, Unity</dd>
+        <dt style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700);padding:13px 0;border-bottom:1px solid var(--color-divider)">Degree</dt>
+        <dd style="margin:0;font-size:14px;text-align:right;padding:13px 0;border-bottom:1px solid var(--color-divider)">B.S. Computer Game Science, UC Irvine</dd>
+        <dt style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700);padding:13px 0">Status</dt>
+        <dd style="margin:0;font-size:14px;text-align:right;padding:13px 0">Open to SWE roles</dd>
+      </dl>
+    </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+    <div class="g-stats" style="max-width:1120px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(3,1fr)">
+      <div style="padding:30px 0;border-right:1px solid var(--color-divider)">
+        <div style="font-family:var(--font-heading);font-weight:700;font-size:44px;line-height:1;color:var(--color-accent-700)">50%</div>
+        <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-700);margin-top:6px">Video latency removed</div>
+      </div>
+      <div style="padding:30px 0 30px 28px;border-right:1px solid var(--color-divider)">
+        <div style="font-family:var(--font-heading);font-weight:700;font-size:44px;line-height:1;color:var(--color-accent-700)">6.5 yrs</div>
+        <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-700);margin-top:6px">At Microsoft</div>
+      </div>
+      <div style="padding:30px 0 30px 28px">
+        <div style="font-family:var(--font-heading);font-weight:700;font-size:44px;line-height:1;color:var(--color-accent-700)">$1M+</div>
+        <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-700);margin-top:6px">Seed raised on a front end I built</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="max-width:1120px;margin:0 auto;padding:80px 32px 24px">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+      <h2 style="font-family:var(--font-heading);font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0">01 — Selected work</h2>
+      <span style="flex:1;height:1px;background:var(--color-divider)"></span>
+      <span style="font-size:13px;color:var(--color-neutral-700)">Microsoft, 2019–2025</span>
+    </div>
+
+    <div class="g-work" style="display:grid;grid-template-columns:repeat(3,1fr);gap:36px">
+      <article class="blueprint" style="padding:28px 24px;display:flex;flex-direction:column;gap:14px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">AI product · Office</div>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:26px;line-height:1.1;margin:0">Multi-file Copilot in PowerPoint</h3>
+        <p style="font-size:15px;line-height:1.6;margin:0;color:var(--color-neutral-800)">Built end-to-end multi-file support: fetching documents through SharePoint, shaping them for the model via Botspeak, and reworking the front end so users could select and reason over several files at once.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px">
+          <span class="tag tag-accent">SharePoint</span><span class="tag tag-accent">TypeScript</span><span class="tag tag-accent">LLM tooling</span>
+        </div>
+      </article>
+
+      <article class="blueprint" style="padding:28px 24px;display:flex;flex-direction:column;gap:14px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">Performance · Office Media</div>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:26px;line-height:1.1;margin:0">Halving video playback latency</h3>
+        <p style="font-size:15px;line-height:1.6;margin:0;color:var(--color-neutral-800)">Implemented an optimized copy codec in C++ that cut end-to-end playback latency by 50% for the Office Media Group, making real-time video usable where it previously stuttered.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px">
+          <span class="tag tag-accent">C++</span><span class="tag tag-accent">Codecs</span><span class="tag tag-accent">Profiling</span>
+        </div>
+      </article>
+
+      <article class="blueprint" style="padding:28px 24px;display:flex;flex-direction:column;gap:14px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">Compliance · Microsoft Stream</div>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:26px;line-height:1.1;margin:0">Removing facial recognition data</h3>
+        <p style="font-size:15px;line-height:1.6;margin:0;color:var(--color-neutral-800)">Stream was out of compliance storing biometric data. I owned the remediation: disabling the functionality and purging all facial data from Azure storage, coordinating across teams under a hard deadline.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px">
+          <span class="tag tag-accent">Azure</span><span class="tag tag-accent">Privacy</span><span class="tag tag-accent">Data deletion</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="history" style="max-width:1120px;margin:0 auto;padding:80px 32px 24px">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:36px">
+      <h2 style="font-family:var(--font-heading);font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0">02 — History</h2>
+      <span style="flex:1;height:1px;background:var(--color-divider)"></span>
+    </div>
+
+    <div class="g-row" style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:26px 0;border-top:1px solid var(--color-divider)">
+      <div>
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.1">Microsoft</div>
+        <div style="font-size:13px;color:var(--color-neutral-700);margin-top:4px">Mar 2019 — Aug 2025</div>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:600;margin-bottom:8px">Software Engineer II</div>
+        <p style="margin:0;font-size:15px;line-height:1.65;max-width:74ch;color:var(--color-neutral-800)">Office and Stream. Shipped AI features into PowerPoint, drove a 50% latency reduction in video playback with an optimized C++ codec, and owned the privacy remediation that removed facial recognition data from Azure storage.</p>
+      </div>
+    </div>
+
+    <div class="g-row" style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:26px 0;border-top:1px solid var(--color-divider)">
+      <div>
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.1">Heavy Iron Studios</div>
+        <div style="font-size:13px;color:var(--color-neutral-700);margin-top:4px">Jul 2017 — Feb 2019</div>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:600;margin-bottom:8px">Associate Programmer</div>
+        <p style="margin:0;font-size:15px;line-height:1.65;max-width:74ch;color:var(--color-neutral-800)">Designed and built the front-end architecture for a startup application that went on to raise over $1M in seed funding. Also engineered a lightweight minimap system for H1Z1 Battle Royale by repurposing existing map code — adopted from PS4 back onto PC.</p>
+      </div>
+    </div>
+
+    <div class="g-row" style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:26px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+      <div>
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.1">Obsidian Entertainment</div>
+        <div style="font-size:13px;color:var(--color-neutral-700);margin-top:4px">Jun 2014 — Nov 2016</div>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:600;margin-bottom:8px">Gameplay Programmer</div>
+        <p style="margin:0;font-size:15px;line-height:1.65;max-width:74ch;color:var(--color-neutral-800)">Gameplay systems and UI in Unity across Pillars of Eternity, Tyranny and Pathfinder — built in tight collaboration with designers and artists on titles that shipped to millions of players.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="shipped" style="max-width:1120px;margin:0 auto;padding:80px 32px 96px">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:36px">
+      <h2 style="font-family:var(--font-heading);font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0">03 — Shipped independently</h2>
+      <span style="flex:1;height:1px;background:var(--color-divider)"></span>
+    </div>
+
+    <div class="blueprint g-ship" style="display:grid;grid-template-columns:1.3fr 1fr;gap:48px;padding:40px 36px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div>
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">Solo project · Steam, March 2026</div>
+        <h3 style="font-family:var(--font-heading);font-weight:700;font-size:42px;line-height:1.05;margin:12px 0 16px">Dungeon Sweeper</h3>
+        <p style="font-size:16px;line-height:1.65;margin:0;color:var(--color-neutral-800);max-width:60ch">An RPG adaptation of Minesweeper, built and shipped end to end: monster spawn logic, item systems, and a new-player experience tuned against real playtest data. I ran the WebGL build on itch.io as a live testbed, shipped devlog updates against player feedback, and managed the Steam store page through launch.</p>
+        <div style="display:flex;gap:12px;margin-top:26px">
+          <a class="btn btn-primary" href="https://store.steampowered.com/app/4109840/DungeonSweeper/" target="_blank" rel="noopener" style="padding:11px 22px;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none">View on Steam</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:0">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--color-divider)">
+          <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-700)">Daily active (WebGL)</span>
+          <span style="font-family:var(--font-heading);font-weight:700;font-size:30px;color:var(--color-accent-700)">100+</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--color-divider)">
+          <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-700)">Steam wishlists</span>
+          <span style="font-family:var(--font-heading);font-weight:700;font-size:30px;color:var(--color-accent-700)">1,000+</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 0">
+          <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-700)">Units, first month</span>
+          <span style="font-family:var(--font-heading);font-weight:700;font-size:30px;color:var(--color-accent-700)">300</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--color-accent-900);color:var(--color-bg)">
+    <div class="g-foot" style="max-width:1120px;margin:0 auto;padding:80px 32px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-300)">Available now</div>
+        <h2 style="font-family:var(--font-heading);font-weight:700;font-size:54px;line-height:1.02;margin:16px 0 0">Looking for the next hard problem.</h2>
+        <p style="font-size:17px;line-height:1.6;margin:18px 0 0;max-width:52ch;color:var(--color-accent-200)">Open to software engineering roles where performance, correctness and shipping matter. Happy to talk through any of the work above.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <a href="mailto:georgetw1108@gmail.com" style="font-family:var(--font-heading);font-weight:600;font-size:24px;color:var(--color-bg);text-decoration:none;border-bottom:1px solid var(--color-accent-400);padding-bottom:2px">georgetw1108@gmail.com</a>
+        <a href="tel:+13235326811" style="font-size:15px;color:var(--color-accent-200);text-decoration:none">+1 323 532 6811</a>
+        <a href="https://linkedin.com/in/georgetangwang/" target="_blank" rel="noopener" style="font-size:15px;color:var(--color-accent-200);text-decoration:none">linkedin.com/in/georgetangwang</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid color-mix(in srgb, #f2f2f3 20%, transparent)">
+      <div style="max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent-300)">
+        <span>George Wang</span>
+        <span>Software Engineer · Redmond, WA</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
