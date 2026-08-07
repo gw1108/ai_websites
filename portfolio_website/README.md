@@ -2,7 +2,7 @@
 
 Source for my personal portfolio site: a single static page (HTML + one stylesheet + one image), no build step, no dependencies.
 
-**Live site: https://georgetangwang.github.io/portfolio/**
+**Live site: https://gw1108.github.io/ai_websites/portfolio_website/**
 
 > Replace the URL above with your real Pages URL once the repo is published.
 
