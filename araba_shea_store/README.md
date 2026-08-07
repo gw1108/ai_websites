@@ -6,6 +6,8 @@ This project exists to **visualize and iterate on a direct-to-consumer (D2C) web
 
 Current storefront: [Araba's Shea on Amazon](https://www.amazon.com/stores/ArabasShea/page/DFD14977-FFA0-47B3-BEB5-BDD6D15E4E22)
 
+ai_websites storefront preview: https://gw1108.github.io/ai_websites/araba_shea_store/
+
 The brand today has a small catalog (~4 SKUs), all with raw/natural/handmade positioning and a strong Ghana origin story:
 
 - Raw Batana Oil for hair growth (2oz and 4oz)
