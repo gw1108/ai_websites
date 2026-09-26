@@ -1,2 +1,5 @@
 # Firecrawl scrape caches (raw HTML dumps, regenerable)
 .firecrawl/
+
+# Plaintext source of the password-protected fire sale site (only the encrypted build is published)
+georges_fire_sale_src/
