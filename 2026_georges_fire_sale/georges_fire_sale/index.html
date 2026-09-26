@@ -12,7 +12,7 @@
 </style>
 </head><body>
 <form id="f">
-  <label for="pw">Enter my name to view the website.</label>
+  <label for="pw">This page is private. Enter the password.</label>
   <input id="pw" type="password" autocomplete="current-password" autofocus>
   <button>Unlock</button>
   <div id="msg"></div>
@@ -25,7 +25,11 @@ async function unlock(pw) {
   const salt = blob.slice(0, 16), iv = blob.slice(16, 28), ct = blob.slice(28);
   const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw.toLowerCase()), 'PBKDF2', false, ['deriveKey']);
   const key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: 200000, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
-  const html = new TextDecoder().decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct));
+  const files = JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct)));
+  const mime = { webp: 'image/webp', woff2: 'font/woff2', js: 'text/javascript' };
+  let html = files['index.html'];
+  for (const rel in files) if (rel !== 'index.html')
+    html = html.split(rel).join('data:' + mime[rel.split('.').pop()] + ';base64,' + files[rel]);
   try { sessionStorage.setItem('gfs-pw', pw); } catch (e) {}
   document.open(); document.write(html); document.close();
 }

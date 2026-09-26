@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Private</title>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#111;color:#eee;font:16px system-ui,sans-serif}
+  form{display:flex;flex-direction:column;gap:12px;width:min(320px,90vw)}
+  input,button{font:inherit;padding:10px 12px;border-radius:8px;border:1px solid #444;background:#1c1c1c;color:inherit}
+  button{background:#eee;color:#111;cursor:pointer}
+  #msg{min-height:1.2em;color:#f88;font-size:14px}
+</style>
+</head><body>
+<form id="f">
+  <label for="pw">This page is private. Enter the password.</label>
+  <input id="pw" type="password" autocomplete="current-password" autofocus>
+  <button>Unlock</button>
+  <div id="msg"></div>
+</form>
+<script>
+const msg = document.getElementById('msg');
+let blob;
+async function unlock(pw) {
+  blob = blob || new Uint8Array(await (await fetch('payload.bin')).arrayBuffer());
+  const salt = blob.slice(0, 16), iv = blob.slice(16, 28), ct = blob.slice(28);
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw.toLowerCase()), 'PBKDF2', false, ['deriveKey']);
+  const key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: 200000, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+  const files = JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct)));
+  const mime = { webp: 'image/webp', woff2: 'font/woff2', js: 'text/javascript' };
+  let html = files['index.html'];
+  for (const rel in files) if (rel !== 'index.html')
+    html = html.split(rel).join('data:' + mime[rel.split('.').pop()] + ';base64,' + files[rel]);
+  try { sessionStorage.setItem('gfs-pw', pw); } catch (e) {}
+  document.open(); document.write(html); document.close();
+}
+document.getElementById('f').onsubmit = async e => {
+  e.preventDefault(); msg.textContent = 'Unlocking…';
+  try { await unlock(document.getElementById('pw').value); }
+  catch (err) { msg.textContent = 'Wrong password.'; }
+};
+let saved = null; try { saved = sessionStorage.getItem('gfs-pw'); } catch (e) {}
+if (saved) unlock(saved).catch(() => {});
+</script>
+</body></html>
